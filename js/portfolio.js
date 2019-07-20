@@ -464,7 +464,7 @@ $(document).ready(function () {
         e.preventDefault()
     })
 
-    var imgPortfolio = ['Jobdesc_app.png', 'Jobdesc_app_2.png', 'Jobdesc_app_3.png', 'Jobdesc_app_4.png']
+    var imgPortfolio = ['Jobdesc_app.PNG', 'Jobdesc_app_2.png', 'Jobdesc_app_3.PNG', 'Jobdesc_app_4.PNG']
     var indexImgPortfolio = 0
     $('.forward-btn a').click(function (e) {
         indexImgPortfolio++
