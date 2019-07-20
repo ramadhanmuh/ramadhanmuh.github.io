@@ -296,6 +296,15 @@ $(document).ready(function () {
 
     // HomePage
 
+    $('.btn-homepage a').click(function (e) {
+        var href = $(this).attr("href"),
+            offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 400);
+        e.preventDefault();
+    });
+
     $('.jumbotron a').each(function (i) {
         $('.jumbotron a').eq(i).hover(function () {
             var link = $('.jumbotron a').eq(i).attr('href')
