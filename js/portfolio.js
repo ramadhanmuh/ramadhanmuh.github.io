@@ -435,11 +435,12 @@ $(document).ready(function () {
     // End About
 
     // Portfolio
-
-    $('.portfolio-content').hover(function () {
-        $('.portfolio-content-content').css('opacity', '1')
-    }, function () {
-        $('.portfolio-content-content').css('opacity', '0')
+    $('.portfolio-content').each(function (i) {
+        $('.portfolio-content').eq(i).hover(function () {
+            $('.portfolio-content-content').eq(i).css('opacity', '1')
+        }, function () {
+            $('.portfolio-content-content').eq(i).css('opacity', '0')
+        })
     })
 
     $('.zoom').click(function (e) {
