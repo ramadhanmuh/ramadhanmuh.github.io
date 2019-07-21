@@ -444,7 +444,10 @@ $(document).ready(function () {
     })
 
     $('.zoom').click(function (e) {
-        $('.overlay').css({
+        var linkZoom = $(this).attr('href')
+        linkZoom = linkZoom.split('#')
+        linkZoom = linkZoom[1]
+        $('.' + linkZoom + '').css({
             'bottom': '0',
             'right': '0',
             'background': 'rgba(0,0,0,0.7)',
@@ -465,19 +468,28 @@ $(document).ready(function () {
         e.preventDefault()
     })
 
-    var imgPortfolio = ['Jobdesc_app.PNG', 'Jobdesc_app_2.png', 'Jobdesc_app_3.PNG', 'Jobdesc_app_4.PNG']
+    var imgPortfolioJobdesc = ['Jobdesc_app.PNG', 'Jobdesc_app_2.png', 'Jobdesc_app_3.PNG', 'Jobdesc_app_4.PNG']
+    var imgPortfolioHospital = ['hospital_app.PNG', 'hospital_app_2.PNG', 'hospital_app_3.PNG']
     var indexImgPortfolio = 0
     $('.forward-btn a').click(function (e) {
         indexImgPortfolio++
-        indexImgPortfolio = indexImgPortfolio == 4 ? 0 : indexImgPortfolio
-        $('.overlay-photo img').attr('src', './img/photo/' + imgPortfolio[indexImgPortfolio] + '')
+        var viewImagePortfolio = $(this).parents('div').hasClass('overlay-jobdesc') ? imgPortfolioJobdesc : imgPortfolioHospital
+        var classButtonParent = viewImagePortfolio == imgPortfolioHospital ? 'overlay-hospital' : 'overlay-jobdesc'
+        var sumImgPortfolio = viewImagePortfolio.length
+        indexImgPortfolio = indexImgPortfolio == sumImgPortfolio ? 0 : indexImgPortfolio
+        $('.' + classButtonParent + ' .overlay-photo img').attr('src', './img/photo/' + viewImagePortfolio[indexImgPortfolio] + '')
+        // alert(classButtonParent)
         e.preventDefault()
     })
 
     $('.back-btn a').click(function (e) {
         indexImgPortfolio--
-        indexImgPortfolio = indexImgPortfolio == -1 ? 3 : indexImgPortfolio
-        $('.overlay-photo img').attr('src', './img/photo/' + imgPortfolio[indexImgPortfolio] + '')
+        // indexImgPortfolio = indexImgPortfolio == -1 ? 3 : indexImgPortfolio
+        var viewImagePortfolio = $(this).parents('div').hasClass('overlay-jobdesc') ? imgPortfolioJobdesc : imgPortfolioHospital
+        var sumImgPortfolio = viewImagePortfolio.length
+        indexImgPortfolio = indexImgPortfolio == -1 ? sumImgPortfolio - 1 : indexImgPortfolio
+        var classButtonParent = viewImagePortfolio == imgPortfolioHospital ? 'overlay-hospital' : 'overlay-jobdesc'
+        $('.' + classButtonParent + ' .overlay-photo img').attr('src', './img/photo/' + viewImagePortfolio[indexImgPortfolio] + '')
         e.preventDefault()
     })
 
