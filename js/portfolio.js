@@ -280,6 +280,7 @@ $(document).ready(function () {
                 }
                 menuItems.filter("[href='#" + id + "']").addClass('active').prepend('<img src="./img/icon/' +
                     img + '" style="width:15px;margin-right:10px;margin-top:-2px;margin-left:-25px;">')
+                $('.navbar-brand img').remove()
                 if (id == 'contact') {
                     $('.contact-content.info').animate({
                         opacity: 1
@@ -510,9 +511,11 @@ $(document).ready(function () {
 
     $('.to-top-btn').click(function (e) {
         scrollPage = false
-        $('.nav-link').removeClass('active')
-        $('.nav-link img').remove()
-        $('.nav-link').filter("[id='home-menu']").addClass('active').prepend('<img src="./img/icon/home.svg" style="width:15px;margin-right:10px;margin-top:-2px;">')
+        if ($(window).width() >= 1000) {
+            $('.nav-link').removeClass('active')
+            $('.nav-link img').remove()
+            $('.nav-link').filter("[id='home-menu']").addClass('active').prepend('<img src="./img/icon/home.svg" style="width:15px;margin-right:10px;margin-top:-2px;">')
+        }
         $('html, body').stop().animate({
             scrollTop: 0
         }, 400);
