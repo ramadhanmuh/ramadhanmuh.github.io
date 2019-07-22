@@ -58,6 +58,8 @@
 
     .jumbotron {
         min-height: 500px;
+        display: flex;
+        align-items: center;
     }
 
     .jumbotron::before {
@@ -85,7 +87,6 @@
     .home-content {
         position: absolute;
         z-index: 9;
-        margin: 140px auto;
         text-align: center;
         text-transform: uppercase;
         color: #fff;
@@ -793,7 +794,6 @@
     .home-content {
         position: absolute;
         z-index: 9;
-        margin: 140px auto;
         text-align: center;
         text-transform: uppercase;
         color: #fff;
@@ -1435,7 +1435,6 @@
     .home-content {
         position: absolute;
         z-index: 9;
-        margin: 170px auto;
         text-align: center;
         text-transform: uppercase;
         color: #fff;
