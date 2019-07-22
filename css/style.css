@@ -1,9 +1,19 @@
+@font-face {
+    font-family: 'pt_sans_captionregular';
+    src: url('PTC55F-webfont.eot');
+    src: url('PTC55F-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 @media (min-width: 320px) {
 
     html,
     body {
         max-width: 100vw;
         background: #F5F5F5;
+        font-family: "pt_sans_captionregular", arial;
     }
 
     .text-title {
