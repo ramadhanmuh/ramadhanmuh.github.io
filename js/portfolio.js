@@ -327,7 +327,7 @@ $(document).ready(function () {
             $(this).children().remove()
             $(this).html('<img src="./img/icon/' + img + '" alt="" style="margin-top:-70px"> ' + text + '')
             $('.jumbotron a img').eq(i).animate({
-                margin: "0px 0px 5px 0px",
+                margin: "-5px 0px 0px 0px",
             }, "fast")
         }, function () {
             var link = $('.jumbotron a').eq(i).attr('href')
