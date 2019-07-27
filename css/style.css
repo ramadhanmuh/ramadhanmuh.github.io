@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'pt_sans_captionregular';
-    src: url('../font/pt-sans/web-fonts/PTC55F-webfont.eot');
-    src: url('../font/pt-sans/web-fonts/ptsanscaption_regular_macroman/PTC55F-webfont.woff') format('woff');
+    src: url(../font/pt-sans/web-fonts/PTC55F-webfont.eot);
+    src: url(../font/pt-sans/web-fonts/ptsanscaption_regular_macroman/PTC55F-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 
