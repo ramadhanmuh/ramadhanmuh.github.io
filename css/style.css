@@ -1485,7 +1485,7 @@
     .portfolio-content#job-desc,
     .portfolio-content#hospital {
         max-width: 100%;
-        margin-top: -250px;
+        margin-top: -200px;
     }
 
     .portfolio-content#hospital::before,
