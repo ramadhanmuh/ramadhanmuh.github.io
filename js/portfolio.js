@@ -158,6 +158,7 @@ $(document).ready(function () {
                     $(this).addClass('active')
                     $('.nav-link.active img').remove(':first')
                 }
+                $('.navbar-collapse').collapse('toggle');
             }
         })
 
@@ -424,7 +425,9 @@ $(document).ready(function () {
                 $(this).css('background', '#36BFC4')
                 $('.about-content a img').eq(i).attr('src', './img/icon/' + iconList + '-white.svg')
             }
-            $('.about-content a span').eq(i).css('opacity', '1')
+            if ($(window).width() >= 1000) {
+                $('.about-content a span').eq(i).css('opacity', '1')
+            }
         }, function () {
             if (!$(this).hasClass('active')) {
                 $(this).css('background', '#fff')

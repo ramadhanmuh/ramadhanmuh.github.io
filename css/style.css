@@ -341,12 +341,12 @@
 
     .portfolio-content#job-desc {
         max-width: 100%;
-        margin-top: -200px;
+        margin-top: -180px;
     }
 
     .portfolio-content#hospital {
         max-width: 100%;
-        margin-top: -100px;
+        margin-top: -50px;
     }
 
     .portfolio-content#job-desc::before {
@@ -522,6 +522,7 @@
 
     #timeline {
         background: #F5F5F5;
+        margin-top: 30px;
     }
 
     .timeline-date {
@@ -1219,6 +1220,7 @@
 
     #timeline {
         background: #F5F5F5;
+        margin-top: unset;
     }
 
     .timeline-date {
@@ -1483,7 +1485,7 @@
     .portfolio-content#job-desc,
     .portfolio-content#hospital {
         max-width: 100%;
-        margin-top: -200px;
+        margin-top: -250px;
     }
 
     .portfolio-content#hospital::before,
