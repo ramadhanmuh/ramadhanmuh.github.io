@@ -436,16 +436,38 @@ $(document).ready(function () {
             $('.about-content a span').eq(i).css('opacity', '0')
         })
     })
+
+    if ($(window).width() < 1000) {
+        // $('.about-content a').css('background', '#36BFC4');
+        window.setInterval(function () {
+            $('.about-content a').each(function (i) {
+                if (!$('.about-content a').eq(i).hasClass('active')) {
+                    $(this).css('background', '#36BFC4');
+                }
+            }, 4100);
+        });
+
+        window.setInterval(function () {
+            $('.about-content a').each(function (i) {
+                if (!$('.about-content a').eq(i).hasClass('active')) {
+                    $(this).css('background', '#FFFFFF');
+                }
+            }, 3000);
+        });
+    }
+
     // End About
 
     // Portfolio
-    $('.portfolio-content').each(function (i) {
-        $('.portfolio-content').eq(i).hover(function () {
-            $('.portfolio-content-content').eq(i).css('opacity', '1')
-        }, function () {
-            $('.portfolio-content-content').eq(i).css('opacity', '0')
+    if ($(window).width() > 1000) {
+        $('.portfolio-content').each(function (i) {
+            $('.portfolio-content').eq(i).hover(function () {
+                $('.portfolio-content-content').eq(i).css('opacity', '1')
+            }, function () {
+                $('.portfolio-content-content').eq(i).css('opacity', '0')
+            })
         })
-    })
+    }
 
     $('.zoom').click(function (e) {
         var linkZoom = $(this).attr('href')
@@ -497,12 +519,20 @@ $(document).ready(function () {
         e.preventDefault()
     })
 
+    if ($(window).width() < 1000) {
+        $('.portfolio-content-content').css('opacity', '1');
+        $('.portfolio-content-content h4').css('background', 'rgba(0,0,0,0.8)');
+        $('.portfolio-content-content h3').css('background', 'rgba(0,0,0,0.8)');
+        $('.portfolio-content-content p').css('background', 'rgba(0,0,0,0.8)');
+        $('.portfolio-content-content div.mx-auto').css('background', 'rgba(0,0,0,0.8)');
+    }
+
     // End Portfolio
 
     // Contact
     $('.contact-content.info').animate({
         opacity: 1
-    }, 500)
+    }, 500);
     $('.contact-content.email').animate({
         opacity: 1
     }, 500)
