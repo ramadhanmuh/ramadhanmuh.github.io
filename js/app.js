@@ -162,12 +162,19 @@ const getPortfolioItems = () => {
 }
 
 const initOwlCarousel = (element, number) => {
+
+    let padding = 25
+
+    if (widthScreen > 1000) {
+        padding = 75
+    }
+
     element.owlCarousel({
         nav: true,
         margin: 15,
         items: number,
         loop: false,
-        stagePadding: 75
+        stagePadding: padding
     });
 
     return true
