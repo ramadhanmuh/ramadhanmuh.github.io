@@ -1,0 +1,6 @@
+$primaryColor: #1ECBE1;
+// $secondaryColor: #E1341E;
+$secondaryColor: darken($primaryColor, 35%);
+
+$primary: $primaryColor !default;
+$secondary: $secondaryColor !default;
