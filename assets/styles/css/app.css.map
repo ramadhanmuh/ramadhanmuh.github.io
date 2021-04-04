@@ -102,7 +102,7 @@
         "../../../vendor/startbootstrap-freelancer/src/scss/_portfolio.scss",
         "../../../vendor/startbootstrap-freelancer/src/scss/_contact.scss",
         "../../../vendor/startbootstrap-freelancer/src/scss/_footer.scss",
-        "../scss/root.scss",
+        "../scss/_root.scss",
         "../scss/_navbar.scss",
         "../scss/_buttons.scss"
     ],
